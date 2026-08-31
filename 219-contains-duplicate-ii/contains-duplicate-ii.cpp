@@ -11,11 +11,9 @@ public:
                 if(abs( i - it->second) <= k){
                     return true;
                 }
-                else{
-                    mp.erase(nums[i]);
-                }
+               
             }
-             mp[nums[i]] = i;
+             mp[nums[i]] = i; // replacing the index
 
         }
         return false;
