@@ -6,19 +6,21 @@ public:
         string new_s;
         for(int i=0; i<s.size(); i++){
             if(s[i]=='('){
+
+                if(depth > 0){
+                    new_s.push_back(s[i]);
+                }
                 depth++;
             }
-            else depth--;
+            else{
+                depth--;
 
-            if (depth==0){
-
-                //idx++;
-                for(int j=idx; j<i; j++){
-                    new_s.push_back(s[j]);
-                    idx++;
+                if(depth>0){
+                    new_s.push_back(s[i]);
                 }
-                idx+=2;
             }
+
+            
         }
         return new_s;
     }
