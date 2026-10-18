@@ -5,7 +5,7 @@ public:
 
         for(int i=0; i<s.size(); i++){
 
-            if(!st.empty() && (('a'- st.top() == 'A'-s[i]) || ('A'-st.top() == 'a'-s[i]))){
+            if(!st.empty() && abs(st.top() - s[i]) == 32){
                 st.pop();
             }
             else{
